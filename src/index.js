@@ -25,7 +25,7 @@ const client = new ApolloClient({
   connectToDevTools: process.env.NODE_ENV === "development"
 });
 
-client.writeData({ data: { cartHidden: true } });
+client.writeData({ data: { cartHidden: true, cartItems: [], itemCount: 0 } });
 
 ReactDOM.render(
   <ApolloProvider client={client}>
